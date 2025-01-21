@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace калькулятор
 {
@@ -19,54 +15,52 @@ namespace калькулятор
             string nom = Console.ReadLine();
             Console.WriteLine("введите 2 число:");
             int nomer2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine();
             if (nom == "+")
             {
                 int wow = nomer1 + nomer2;
-                Console.WriteLine("                 " + nomer1);
-                Console.WriteLine("                +");
-                Console.WriteLine("                 " + nomer2);
-                Console.WriteLine("                 -------------------------");
-                Console.WriteLine("                 " + wow);
+                Console.WriteLine("  " + nomer1);
+                Console.WriteLine("+");
+                Console.WriteLine("  " + nomer2);
+                Console.WriteLine("-------");
+                Console.WriteLine("  " + wow);
             }
             if (nom == "-")
             {
                 int wow = nomer1 - nomer2;
-                Console.WriteLine("                 " + nomer1);
-                Console.WriteLine("                -");
-                Console.WriteLine("                 " + nomer2);
-                Console.WriteLine("                 -------------------------");
-                Console.WriteLine("                 " + wow);
+                Console.WriteLine("  " + nomer1);
+                Console.WriteLine("-");
+                Console.WriteLine("  " + nomer2);
+                Console.WriteLine("-------");
+                Console.WriteLine("  " + wow);
             }
             if (nom == "x")
             {
                 int wow = nomer1 * nomer2;
-                Console.WriteLine("                 " + nomer1);
-                Console.WriteLine("                x");
-                Console.WriteLine("                 " + nomer2);
-                Console.WriteLine("                 -------------------------");
-                Console.WriteLine("                 " + wow);
+                Console.WriteLine("  " + nomer1);
+                Console.WriteLine("x");
+                Console.WriteLine("  " + nomer2);
+                Console.WriteLine("-------");
+                Console.WriteLine("  " + wow);
             }
             if (nom == "/")
             {
                 int wow = nomer1 / nomer2;
                 string a = Convert.ToString(wow);
 
-                Console.WriteLine("                 " + nomer1 + "|_" + nomer2 + "___");
-                Console.WriteLine("                     "+ wow );
+                Console.WriteLine("  " + nomer1 + "|_" + nomer2 + "___");
+                Console.WriteLine("  " + wow);
                 for (int i = 0; i < a.Length; i++)
                 {
                     var output = Regex.Replace(a.Split()[i], @"[^0-9a-zA-Z\ ]+", "");
                     int das = Convert.ToInt32(output);
                     int ops = das * nomer2;
-                    Console.WriteLine("                 "+ ops);
+                    Console.WriteLine("  " + ops);
                 }
-                
 
-
-               
-                
-                Console.WriteLine("                 -------------------------");
-                Console.WriteLine("                 " + 0);
+                Console.WriteLine("--------------");
+                Console.WriteLine("  " + 0);
             }
 
 
